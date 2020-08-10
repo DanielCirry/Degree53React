@@ -1,3 +1,11 @@
+The build has been modified to suppress warnings as errors from react.
+Also not it will upload the redirect file from public without file extension.
+
+Once you create a new post, refresh the page if you don't see it. The redirect is faster than the async call and even if at first you can't see it, the post is there.
+
+If it does't create or get 500, i might have "switched off" the paid sql instance on azure, ask if you would like me to switch it on.
+
+
 <<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
