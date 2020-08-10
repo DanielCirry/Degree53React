@@ -4,7 +4,7 @@ import BaseLayout from "../Components/BaseLayout";
 import { getPostsGetRequestConfig } from "../globals/requestConfig";
 import PostComponent from "../Components/PostComponent";
 
-export default class AdminPage extends React.Component {
+export default class UserPage extends React.Component {
     state = {
         data: [],
         error: null,
@@ -60,10 +60,8 @@ export default class AdminPage extends React.Component {
                     <p>Loading...</p>
                 ) : (
                     !error
-                ? ( <>
-                    <p>Numbers of posts: {data ? data.length : 0}</p>
-                    <PostComponent data={data} admin={true}/>
-                    </>)
+                    ? 
+                    <PostComponent data={data} />                    
                     : <p>Something went Wrong</p>
                     )
                 }

@@ -61,12 +61,15 @@ export default function PostComponent(props) {
 
   return (
     <Container>
-        <FloatingButton 
+       {props.admin &&
+       <FloatingButton 
         color="primary"
          aria-label="add"
          onClick={handleButtonClick}>
         <AddIcon />
       </FloatingButton>
+       }
+
       {props.data && props.data.map( p => (
             <CardContainer>
                 <CardContent>

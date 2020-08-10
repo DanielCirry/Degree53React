@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import AdminPage from "./Pages/AdminPage";
+import UserPage from "./Pages/UserPage";
 import PostCreation from "./Pages/PostCreation";
 import NotFoundPage from "./Pages/NotFoundPage";
 
@@ -13,6 +14,9 @@ export default function App() {
           <ul>
             <li>
               <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/userpage">User Page</Link>
             </li>
             <li>
               <Link to="/postcreation">Create Post</Link>
@@ -32,6 +36,9 @@ export default function App() {
           <Route path="/postcreation">
             <CreatePost />
           </Route>
+          <Route path="/userpage">
+            <UserPageView />
+          </Route>
           <Route path="/">
             <Home />
           </Route>
@@ -47,6 +54,10 @@ function Home() {
 
 function CreatePost() {
   return <PostCreation />;
+}
+
+function UserPageView() {
+  return <UserPage />;
 }
 
 function NotFound() {
