@@ -1,3 +1,4 @@
+//export const baseUrl = "https://localhost:44382/api/Degree53/v1";
 export const baseUrl = "https://cors-anywhere.herokuapp.com/https://degree53.azurewebsites.net/api/Degree53/v1";
 
 export const userId = "f2cad92a-261c-48dd-a9ea-b71da4314499";
