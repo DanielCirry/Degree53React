@@ -5,7 +5,6 @@ import { addPostPostRequestConfig } from "../globals/requestConfig";
 import CreatePostComponent from "../Components/CreatePostComponent";
 
 export default function PostCreation(props) {    
-    const [data, setData] = React.useState([]);
     const [error, setError] = React.useState(null);
     const [loading, setLoading] = React.useState(false);
     const [succed, setSucced] = React.useState(false);
@@ -42,9 +41,8 @@ export default function PostCreation(props) {
         setSucced(false);
         console.log(modelData);
         try {
-            let data = await addPostPostRequestConfig(modelData);
+             await addPostPostRequestConfig(modelData);
             setLoading(false);
-            setData(data);
             setSucced(true);
             
         } catch (error) {

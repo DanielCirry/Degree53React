@@ -7,15 +7,13 @@ export default class CreatePostComponent extends React.Component {
     state = {
         title: "",
         content: "",
-        errorMessage: "",
-        loaing: false,
         error: null
     }
 
     views = this.views +1;
 
     handleSubmit = async () => {
-        const {title, content, loaing, errorMessage} = this.state;
+        const {title, content} = this.state;
         this.setState({errorMessage: ""});
 
         if(title ==="" || content === "")
