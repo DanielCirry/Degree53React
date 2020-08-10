@@ -30,7 +30,6 @@ export default class CreatePostComponent extends React.Component {
             }
         }        
      
-        console.log(this.props);
         this.props.getData(data);
     }
 

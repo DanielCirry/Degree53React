@@ -66,8 +66,7 @@ export default function PostComponent(props) {
          aria-label="add"
          onClick={handleButtonClick}>
         <AddIcon />
-      </FloatingButton>  
-      {console.log(props)} 
+      </FloatingButton>
       {props.data && props.data.map( p => (
             <CardContainer>
                 <CardContent>

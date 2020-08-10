@@ -39,7 +39,7 @@ export default function PostCreation(props) {
         setLoading(true);
         setError(null);
         setSucced(false);
-        console.log(modelData);
+        
         try {
              await addPostPostRequestConfig(modelData);
             setLoading(false);

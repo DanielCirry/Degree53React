@@ -55,12 +55,15 @@ export default class AdminPage extends React.Component {
     render(){
         const { loading, error, data } = this.state;
         return(
-            <BaseLayout>            
+            <BaseLayout>
                 {loading ? (
                     <p>Loading...</p>
                 ) : (
                     !error
-                    ? <PostComponent data={data}/>
+                ? ( <>
+                    <p>Numbers of posts: {data ? data.length : 0}</p>
+                    <PostComponent data={data}/>
+                    </>)
                     : <p>Something went Wrong</p>
                     )
                 }
